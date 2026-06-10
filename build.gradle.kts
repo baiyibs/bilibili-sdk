@@ -3,7 +3,16 @@ plugins {
 }
 
 group = "io.github.baiyibs.bilibili-sdk"
-version = "1.0-SNAPSHOT"
+version = "0.0.1"
+description = "Bilibili Java SDK"
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(11))
+    }
+    withSourcesJar()
+    withJavadocJar()
+}
 
 repositories {
     mavenCentral()
@@ -19,4 +28,14 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+tasks.javadoc {
+    options.encoding = "UTF-8"
+}
+
+tasks.jar {
+    manifest {
+        attributes("Automatic-Module-Name" to "io.github.baiyibs.bilibili.sdk")
+    }
 }
