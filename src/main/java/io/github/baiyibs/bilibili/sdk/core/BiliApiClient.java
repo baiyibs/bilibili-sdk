@@ -5,10 +5,7 @@ import com.google.gson.JsonSyntaxException;
 import io.github.baiyibs.bilibili.sdk.core.exception.EmptyResponseException;
 import io.github.baiyibs.bilibili.sdk.core.exception.InvalidUrlException;
 import io.github.baiyibs.bilibili.sdk.core.interceptor.UserAgentInterceptor;
-import okhttp3.HttpUrl;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
+import okhttp3.*;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
@@ -21,7 +18,7 @@ public class BiliApiClient {
     private final OkHttpClient httpClient;
 
     /**
-     * 构造一个默认的  {@code BiliApiClient} 实例
+     * 构造一个默认的  {@code BiliApiClient} 实例。
      * <p>使用固定的 Chrome 浏览器 User-Agent 字符串，并通过 {@link UserAgentInterceptor}
      * 为所有请求添加该头。</p>
      */
@@ -74,7 +71,7 @@ public class BiliApiClient {
     }
 
     /**
-     *
+     * 发送无查询参数的 GET 请求，并将响应体的 JSON 反序列化为指定类型的对象。
      * @param url 完整的请求URL
      * @param type 目标类型的 {@link Type} 描述，通常通过 {@code new TypeToken<T>(){}.getType()} 获取，
      *             用于保留泛型信息（例如 {@code ApiResponse<User>}）
@@ -112,6 +109,30 @@ public class BiliApiClient {
      */
     public <T> T get(String url, Map<String, String> params, Type type) throws IOException {
         String responseJson = this.get(url, params);
+        if (responseJson == null || responseJson.trim().isEmpty()) {
+            throw new EmptyResponseException(url);
+        }
+
+        try {
+            return new Gson().fromJson(responseJson, type);
+        } catch (JsonSyntaxException e) {
+            throw new JsonSyntaxException("Json解析失败: " + responseJson, e);
+        }
+    }
+
+    public String post(String url, RequestBody requestBody) throws IOException {
+        Request request = new Request.Builder()
+                .url(url)
+                .post(requestBody)
+                .build();
+
+        try (Response response = this.httpClient.newCall(request).execute()) {
+            return response.body().string();
+        }
+    }
+
+    public <T> T post(String url, RequestBody requestBody, Type type) throws IOException {
+        String responseJson = this.post(url, requestBody);
         if (responseJson == null || responseJson.trim().isEmpty()) {
             throw new EmptyResponseException(url);
         }
