@@ -2,8 +2,8 @@ package io.github.baiyibs.bilibili.sdk.core;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import io.github.baiyibs.bilibili.sdk.core.exception.EmptyResponseException;
-import io.github.baiyibs.bilibili.sdk.core.exception.InvalidUrlException;
+import io.github.baiyibs.bilibili.sdk.exception.core.EmptyResponseException;
+import io.github.baiyibs.bilibili.sdk.exception.core.InvalidUrlException;
 import io.github.baiyibs.bilibili.sdk.core.interceptor.UserAgentInterceptor;
 import okhttp3.*;
 

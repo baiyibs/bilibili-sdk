@@ -1,4 +1,6 @@
-package io.github.baiyibs.bilibili.sdk.core.exception;
+package io.github.baiyibs.bilibili.sdk.exception.core;
+
+import io.github.baiyibs.bilibili.sdk.exception.BiliApiException;
 
 /**
  * 表示 URL 格式无效的异常。
@@ -6,7 +8,7 @@ package io.github.baiyibs.bilibili.sdk.core.exception;
  * 当传入的 URL 字符串无法被 {@link okhttp3.HttpUrl#parse(String)} 解析为合法 URL 时抛出。
  * </p>
  */
-public class InvalidUrlException extends BiliApiException{
+public class InvalidUrlException extends BiliApiException {
 
     /**
      * 构造一个包含无效 URL 字符串的异常。
