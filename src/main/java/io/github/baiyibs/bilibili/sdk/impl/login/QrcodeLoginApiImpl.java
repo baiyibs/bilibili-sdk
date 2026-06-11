@@ -5,9 +5,12 @@ import io.github.baiyibs.bilibili.sdk.api.login.QrcodeLoginApi;
 import io.github.baiyibs.bilibili.sdk.core.BiliApiClient;
 import io.github.baiyibs.bilibili.sdk.model.ApiResponse;
 import io.github.baiyibs.bilibili.sdk.model.login.QrcodeData;
+import io.github.baiyibs.bilibili.sdk.model.login.QrcodePollData;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.HashMap;
+import java.util.Map;
 
 public class QrcodeLoginApiImpl implements QrcodeLoginApi {
     private final BiliApiClient client;
@@ -24,5 +27,19 @@ public class QrcodeLoginApiImpl implements QrcodeLoginApi {
         String baseUrl = "https://passport.bilibili.com/x/passport-login/web/qrcode/generate";
         Type type = new TypeToken<ApiResponse<QrcodeData>>(){}.getType();
         return client.get(baseUrl, type);
+    }
+
+    /**
+     * 轮询扫码状态（web端）。
+     * @param qrcodeKey
+     */
+    @Override
+    public ApiResponse<QrcodePollData> pollQrCode(String qrcodeKey) throws IOException {
+        String baseUrl = "https://passport.bilibili.com/x/passport-login/web/qrcode/poll";
+        Type type = new TypeToken<ApiResponse<QrcodePollData>>(){}.getType();
+
+        Map<String, String> params = new HashMap<>();
+        params.put("qrcode_key", qrcodeKey);
+        return client.get(baseUrl, params,type);
     }
 }

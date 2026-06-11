@@ -33,6 +33,9 @@ public class ApiResponse<T> {
         return message;
     }
 
+    /**
+     * 该字段可能不存在，为 {@code null}时表示接口未返回。
+     */
     public Integer getTtl() {
         return ttl;
     }
@@ -42,5 +45,15 @@ public class ApiResponse<T> {
      */
     public T getData() {
         return data;
+    }
+
+    @Override
+    public String toString() {
+        return "ApiResponse{" +
+                "code=" + code +
+                ", message='" + message + '\'' +
+                ", ttl=" + ttl +
+                ", data=" + data +
+                '}';
     }
 }

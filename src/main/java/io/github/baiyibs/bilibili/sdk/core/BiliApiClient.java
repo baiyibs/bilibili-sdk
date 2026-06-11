@@ -16,6 +16,7 @@ import java.util.Map;
  */
 public class BiliApiClient {
     private final OkHttpClient httpClient;
+    private final LocalCookieJar cookieJar;
 
     /**
      * 构造一个默认的  {@code BiliApiClient} 实例。
@@ -24,9 +25,16 @@ public class BiliApiClient {
      */
     public BiliApiClient() {
         String userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.7727.56 Safari/537.36";
+
+        this.cookieJar = new LocalCookieJar();
         this.httpClient = new OkHttpClient.Builder()
                 .addInterceptor(new UserAgentInterceptor(userAgent))
+                .cookieJar(cookieJar)
                 .build();
+    }
+
+    public LocalCookieJar getCookieJar() {
+        return this.cookieJar;
     }
 
     /**

@@ -28,8 +28,8 @@ public class UserAgentInterceptor implements Interceptor {
     @NotNull
     @Override
     public Response intercept(@NotNull Chain chain) throws IOException {
-        Request original = chain.request();
-        Request request = original.newBuilder()
+        Request originalRequest = chain.request();
+        Request request = originalRequest.newBuilder()
                 .header("User-Agent", userAgent)
                 .build();
         return chain.proceed(request);
