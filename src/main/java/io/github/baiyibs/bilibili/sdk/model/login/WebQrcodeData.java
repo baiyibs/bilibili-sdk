@@ -2,7 +2,7 @@ package io.github.baiyibs.bilibili.sdk.model.login;
 
 import com.google.gson.annotations.SerializedName;
 
-public class QrcodeData {
+public class WebQrcodeData {
 
     /**
      * 二维码内容 (登录页面 url)。
@@ -15,7 +15,7 @@ public class QrcodeData {
     @SerializedName("qrcode_key")
     private String qrcodeKey;
 
-    public QrcodeData(String url, String qrCodeKey) {
+    public WebQrcodeData(String url, String qrCodeKey) {
         this.url = url;
         this.qrcodeKey = qrCodeKey;
     }

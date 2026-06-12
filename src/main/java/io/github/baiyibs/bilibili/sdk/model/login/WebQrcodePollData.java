@@ -2,7 +2,7 @@ package io.github.baiyibs.bilibili.sdk.model.login;
 
 import com.google.gson.annotations.SerializedName;
 
-public class QrcodePollData {
+public class WebQrcodePollData {
     /**
      * 游戏分站跨域登录 url。
      */
@@ -33,7 +33,7 @@ public class QrcodePollData {
 
     private String message;
 
-    public QrcodePollData(String url, String refreshToken, Long timestamp, Integer code, String message) {
+    public WebQrcodePollData(String url, String refreshToken, Long timestamp, Integer code, String message) {
         this.url = url;
         this.refreshToken = refreshToken;
         this.timestamp = timestamp;
