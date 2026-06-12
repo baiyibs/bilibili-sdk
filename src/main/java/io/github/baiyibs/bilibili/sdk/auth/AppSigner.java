@@ -13,9 +13,6 @@ import java.util.TreeMap;
  * <p>
  * 实现 APP 端签名算法
  * </p>
- *
- * @author baiyibs
- * @version 1.0
  */
 public final class AppSigner {
 

@@ -24,10 +24,14 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
     implementation("com.squareup.okhttp3:okhttp:5.4.0")
     implementation("com.google.code.gson:gson:2.14.0")
+    testImplementation("com.squareup.okhttp3:mockwebserver:5.4.0")
 }
 
 tasks.test {
     useJUnitPlatform()
+    filter {
+        failOnNoDiscoveredTests = false
+    }
 }
 
 tasks.javadoc {
@@ -38,4 +42,12 @@ tasks.jar {
     manifest {
         attributes("Automatic-Module-Name" to "io.github.baiyibs.bilibili.sdk")
     }
+}
+
+tasks.withType<JavaExec> {
+    systemProperty("file.encoding", "UTF-8")
+}
+
+tasks.withType<Test> {
+    systemProperty("file.encoding", "UTF-8")
 }
