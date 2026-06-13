@@ -6,7 +6,7 @@ public class WebQrcodePollData {
     /**
      * 游戏分站跨域登录 url。
      */
-    private String url;
+    private final String url;
 
     /**
      * 刷新令牌。
@@ -17,7 +17,7 @@ public class WebQrcodePollData {
     /**
      * 登录时间戳，单位为毫秒。
      */
-    private Long timestamp;
+    private final Long timestamp;
 
     /**
      * 扫码状态码。
@@ -29,9 +29,9 @@ public class WebQrcodePollData {
      *     <li>{@code 86101}：未扫码</li>
      * </ul>
      */
-    private Integer code;
+    private final Integer code;
 
-    private String message;
+    private final String message;
 
     public WebQrcodePollData(String url, String refreshToken, Long timestamp, Integer code, String message) {
         this.url = url;

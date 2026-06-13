@@ -21,6 +21,7 @@ public class ApiResponse<T> {
 
     /**
      * 请求返回值。
+     * @return code
      */
     public Integer getCode() {
         return code;
@@ -28,6 +29,7 @@ public class ApiResponse<T> {
 
     /**
      * 请求响应信息。
+     * @return String
      */
     public String getMessage() {
         return message;
@@ -35,6 +37,7 @@ public class ApiResponse<T> {
 
     /**
      * 该字段可能不存在，为 {@code null}时表示接口未返回。
+     * @return ttl
      */
     public Integer getTtl() {
         return ttl;
@@ -42,6 +45,7 @@ public class ApiResponse<T> {
 
     /**
      * 请求响应的数据。
+     * @return data
      */
     public T getData() {
         return data;

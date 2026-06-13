@@ -7,7 +7,7 @@ public class TvQrcodeData {
     /**
      * 二维码内容 (登录页面 url)。
      */
-    private String url;
+    private final String url;
 
     /**
      * 扫码登录秘钥。

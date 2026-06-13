@@ -31,7 +31,7 @@ public class WebQrcodeLoginApiImpl implements WebQrcodeLoginApi {
 
     /**
      * 轮询扫码状态（web端）。
-     * @param qrcodeKey
+     * @param qrcodeKey 扫码登录秘钥
      */
     @Override
     public ApiResponse<WebQrcodePollData> pollQrCode(String qrcodeKey) throws IOException {
