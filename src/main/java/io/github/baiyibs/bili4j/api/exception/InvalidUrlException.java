@@ -1,6 +1,4 @@
-package io.github.baiyibs.bili4j.api.exception.core;
-
-import io.github.baiyibs.bili4j.api.exception.BiliApiException;
+package io.github.baiyibs.bili4j.api.exception;
 
 /**
  * 表示 URL 格式无效的异常。

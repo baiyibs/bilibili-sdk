@@ -2,8 +2,8 @@ package io.github.baiyibs.bili4j.api.core;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import io.github.baiyibs.bili4j.api.exception.core.EmptyResponseException;
-import io.github.baiyibs.bili4j.api.exception.core.InvalidUrlException;
+import io.github.baiyibs.bili4j.api.exception.EmptyResponseException;
+import io.github.baiyibs.bili4j.api.exception.InvalidUrlException;
 import io.github.baiyibs.bili4j.api.core.interceptor.UserAgentInterceptor;
 import okhttp3.*;
 
