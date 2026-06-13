@@ -33,6 +33,10 @@ tasks.test {
     }
 }
 
+tasks.javadoc {
+    options.encoding = "UTF-8"
+}
+
 tasks.jar {
     manifest {
         attributes("Automatic-Module-Name" to "io.github.baiyibs.bilibili.sdk")
