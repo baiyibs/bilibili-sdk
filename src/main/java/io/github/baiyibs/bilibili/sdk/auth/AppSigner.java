@@ -75,7 +75,7 @@ public final class AppSigner {
 
         StringBuilder stringBuilder = new StringBuilder();
         for (Map.Entry<String, String> entry : sorted.entrySet()) {
-            if (!stringBuilder.isEmpty()) {
+            if (stringBuilder.length() > 0) {
                 stringBuilder.append('&');
             }
             String encodedKey = encode(entry.getKey());
