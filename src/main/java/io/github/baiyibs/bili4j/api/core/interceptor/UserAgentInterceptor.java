@@ -1,4 +1,4 @@
-package io.github.baiyibs.bilibili.sdk.core.interceptor;
+package io.github.baiyibs.bili4j.api.core.interceptor;
 
 import okhttp3.Interceptor;
 import okhttp3.Request;

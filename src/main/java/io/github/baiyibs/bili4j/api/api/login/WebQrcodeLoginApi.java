@@ -1,8 +1,8 @@
-package io.github.baiyibs.bilibili.sdk.api.login;
+package io.github.baiyibs.bili4j.api.api.login;
 
-import io.github.baiyibs.bilibili.sdk.model.ApiResponse;
-import io.github.baiyibs.bilibili.sdk.model.login.WebQrcodeData;
-import io.github.baiyibs.bilibili.sdk.model.login.WebQrcodePollData;
+import io.github.baiyibs.bili4j.api.model.ApiResponse;
+import io.github.baiyibs.bili4j.api.model.login.WebQrcodeData;
+import io.github.baiyibs.bili4j.api.model.login.WebQrcodePollData;
 
 import java.io.IOException;
 

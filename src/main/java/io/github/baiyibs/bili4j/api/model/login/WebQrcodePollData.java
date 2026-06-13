@@ -1,4 +1,4 @@
-package io.github.baiyibs.bilibili.sdk.model.login;
+package io.github.baiyibs.bili4j.api.model.login;
 
 import com.google.gson.annotations.SerializedName;
 

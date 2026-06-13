@@ -2,9 +2,9 @@ plugins {
     id("java")
 }
 
-group = "io.github.baiyibs.bilibili-sdk"
+group = "io.github.baiyibs"
 version = "0.0.1"
-description = "Bilibili Java SDK"
+description = "Bilibili Java API"
 
 java {
     toolchain {

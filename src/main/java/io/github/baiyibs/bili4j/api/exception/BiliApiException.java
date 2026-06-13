@@ -1,4 +1,4 @@
-package io.github.baiyibs.bilibili.sdk.exception;
+package io.github.baiyibs.bili4j.api.exception;
 
 import java.io.IOException;
 

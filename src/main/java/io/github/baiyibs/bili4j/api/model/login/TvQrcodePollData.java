@@ -1,11 +1,12 @@
-package io.github.baiyibs.bilibili.sdk.model.login;
+package io.github.baiyibs.bili4j.api.model.login;
 
 import com.google.gson.annotations.SerializedName;
+import io.github.baiyibs.bili4j.api.model.ApiResponse;
 
 /**
  * TV 端扫码登录轮询数据
  * <p>
- *     二维码状态在 {@link io.github.baiyibs.bilibili.sdk.model.ApiResponse} 中的 {@code code} 表示
+ *     二维码状态在 {@link ApiResponse} 中的 {@code code} 表示
  * </p>
  * <ul>
  *     <li>{@code 0}：成功</li>

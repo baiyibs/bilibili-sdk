@@ -1,1 +1,1 @@
-rootProject.name = "bilibili-sdk"
+rootProject.name = "bili4j-api"

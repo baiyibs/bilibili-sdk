@@ -1,6 +1,6 @@
-package io.github.baiyibs.bilibili.sdk.exception.core;
+package io.github.baiyibs.bili4j.api.exception.core;
 
-import io.github.baiyibs.bilibili.sdk.exception.BiliApiException;
+import io.github.baiyibs.bili4j.api.exception.BiliApiException;
 
 /**
  * 表示响应体为空或仅包含空白字符的异常。

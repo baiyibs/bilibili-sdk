@@ -1,12 +1,12 @@
-package io.github.baiyibs.bilibili.sdk.impl.login;
+package io.github.baiyibs.bili4j.api.impl.login;
 
 import com.google.gson.reflect.TypeToken;
-import io.github.baiyibs.bilibili.sdk.api.login.TvQrcodeLoginApi;
-import io.github.baiyibs.bilibili.sdk.auth.AppSigner;
-import io.github.baiyibs.bilibili.sdk.core.BiliApiClient;
-import io.github.baiyibs.bilibili.sdk.model.ApiResponse;
-import io.github.baiyibs.bilibili.sdk.model.login.TvQrcodeData;
-import io.github.baiyibs.bilibili.sdk.model.login.TvQrcodePollData;
+import io.github.baiyibs.bili4j.api.api.login.TvQrcodeLoginApi;
+import io.github.baiyibs.bili4j.api.auth.AppSigner;
+import io.github.baiyibs.bili4j.api.core.BiliApiClient;
+import io.github.baiyibs.bili4j.api.model.ApiResponse;
+import io.github.baiyibs.bili4j.api.model.login.TvQrcodeData;
+import io.github.baiyibs.bili4j.api.model.login.TvQrcodePollData;
 import okhttp3.*;
 
 import java.io.IOException;

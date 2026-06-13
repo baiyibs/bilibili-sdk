@@ -1,8 +1,8 @@
-package io.github.baiyibs.bilibili.sdk.model.login;
+package io.github.baiyibs.bili4j.api.model.login;
 
 import com.google.gson.annotations.SerializedName;
 
-public class TvQrcodeData {
+public class WebQrcodeData {
 
     /**
      * 二维码内容 (登录页面 url)。
@@ -12,27 +12,27 @@ public class TvQrcodeData {
     /**
      * 扫码登录秘钥。
      */
-    @SerializedName("auth_code")
-    private String auth_code;
+    @SerializedName("qrcode_key")
+    private String qrcodeKey;
 
-    public TvQrcodeData(String url, String auth_code) {
+    public WebQrcodeData(String url, String qrCodeKey) {
         this.url = url;
-        this.auth_code = auth_code;
+        this.qrcodeKey = qrCodeKey;
     }
 
     public String getUrl() {
         return url;
     }
 
-    public String getAuthCode() {
-        return auth_code;
+    public String getQrcodeKey() {
+        return qrcodeKey;
     }
 
     @Override
     public String toString() {
-        return "TvQrcodeData{" +
+        return "QrcodeData{" +
                 "url='" + url + '\'' +
-                ", auth_code='" + auth_code + '\'' +
+                ", qrcodeKey='" + qrcodeKey + '\'' +
                 '}';
     }
 }

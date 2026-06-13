@@ -1,4 +1,4 @@
-package io.github.baiyibs.bilibili.sdk.core;
+package io.github.baiyibs.bili4j.api.core;
 
 import okhttp3.Cookie;
 import okhttp3.CookieJar;

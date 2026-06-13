@@ -1,4 +1,4 @@
-package io.github.baiyibs.bilibili.sdk.auth;
+package io.github.baiyibs.bili4j.api.auth;
 
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
